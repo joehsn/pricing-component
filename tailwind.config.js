@@ -10,7 +10,7 @@ module.exports = {
       colors: {
         // ### Primary
         FLPG: "hsl(236, 72%, 79%)",
-        TFLPG: "hsl(237, 63%, 64%)",
+        TLPG: "hsl(237, 63%, 64%)",
         // ### Neutral
         "very-light-grayish-blue": "hsl(240, 78%, 98%)",
         "light-grayish-blue": "hsl(234, 14%, 74%)",

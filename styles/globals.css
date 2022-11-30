@@ -1,10 +1,81 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 @layer components {
   html,
-  body {
-    @apply w-screen min-h-screen;
+  body,
+  main {
+    @apply box-border relative w-full overflow-x-hidden min-h-screen;
+    background: url(/bg-top.svg) right top, url(/bg-bottom.svg) left bottom;
+    @apply bg-very-light-grayish-blue dark:bg-dark-grayish-blue bg-no-repeat;
+  }
+  /* Header */
+  .container {
+    @apply flex flex-col items-center justify-center max-w-5xl mx-auto py-16 px-4;
+  }
+  header {
+    @apply flex flex-col items-center justify-center w-full;
+  }
+  header h1 {
+    @apply text-4xl font-bold text-center text-dark-grayish-blue dark:text-very-light-grayish-blue;
+  }
+  .toggler {
+    @apply flex items-center justify-evenly my-8 text-FLPG;
+  }
+  .toggler label {
+    @apply mx-12 inline-flex relative items-center cursor-pointer;
+  }
+  .toggler label div {
+    @apply w-11 h-6 bg-light-grayish-blue rounded-full dark:bg-grayish-blue after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600;
+  }
+  .plans {
+    @apply flex flex-col lg:flex-row items-center justify-center w-full gap-y-4;
+  }
+  .plan {
+    @apply flex flex-col items-center justify-center text-dark-grayish-blue dark:text-very-light-grayish-blue w-full lg:w-1/3 bg-white dark:bg-grayish-blue rounded-lg shadow-lg p-8 space-y-8;
+  }
+  .plan:first-of-type {
+    @apply lg:rounded-tr-none lg:rounded-br-none;
+  }
+  .plan:nth-of-type(2) {
+    @apply py-16 z-10 lg:shadow-none bg-TLPG text-white;
+  }
+  .plan:last-of-type {
+    @apply lg:rounded-tl-none lg:rounded-bl-none;
+  }
+  .plan h2 {
+    @apply font-bold;
+  }
+  .price {
+    @apply text-6xl font-bold;
+  }
+  .features {
+    @apply w-full;
+  }
+  .features li {
+    @apply w-full text-center text-sm font-bold py-2 border-t border-t-very-light-grayish-blue border-solid;
+  }
+  .features li:last-of-type {
+    @apply border-b border-b-very-light-grayish-blue border-solid;
+  }
+  .plan:nth-of-type(2) .features li {
+    @apply text-white;
+  }
+  .btn {
+    @apply w-full font-bold uppercase py-2 text-center text-white rounded-md bg-TLPG border border-solid border-transparent hover:bg-transparent hover:border-dark-grayish-blue dark:hover:border-very-light-grayish-blue;
+  }
+  .plan:nth-of-type(2) .btn {
+    @apply bg-white text-TLPG hover:bg-transparent hover:text-white hover:border-white;
+  }
+
+  /* Footer */
+  footer {
+    @apply gap-y-4 py-8 w-full bg-slate-900 text-white flex flex-col md:flex-row justify-evenly items-center;
+  }
+  footer a {
+    @apply text-teal-500 hover:text-teal-700 font-bold;
+  }
+  footer select {
+    @apply bg-slate-900 text-white font-bold py-2 px-4 rounded border border-white hover:border-transparent hover:text-slate-900 hover:bg-white transition duration-300 ease-in-out;
   }
 }
