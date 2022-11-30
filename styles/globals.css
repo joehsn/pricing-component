@@ -62,7 +62,7 @@
     @apply text-white;
   }
   .btn {
-    @apply w-full font-bold uppercase py-2 text-center text-white rounded-md bg-TLPG border border-solid border-transparent hover:bg-transparent hover:border-dark-grayish-blue dark:hover:border-very-light-grayish-blue;
+    @apply w-full font-bold uppercase py-2 text-center text-white rounded-md bg-TLPG border border-solid border-transparent hover:text-TLPG hover:bg-transparent hover:border-dark-grayish-blue dark:hover:text-white dark:hover:border-very-light-grayish-blue;
   }
   .plan:nth-of-type(2) .btn {
     @apply bg-white text-TLPG hover:bg-transparent hover:text-white hover:border-white;
